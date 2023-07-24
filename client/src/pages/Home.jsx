@@ -15,7 +15,7 @@ const RenderCard = ({ data, title }) => {
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
-  const [allPost, setAllPost] = useState(null);
+  const [allPost, setAllPost] = useState([  ]);
   const [searchText, setSearchText] = useState('');
   useEffect(()=>{
     const fetchPosts = async () => {
@@ -37,6 +37,7 @@ const Home = () => {
         setLoading(false)
       }
     }
+    fetchPosts();
   },[])
   return (
     <section className='max-w-7xl mx-auto'>

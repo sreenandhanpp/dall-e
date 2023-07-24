@@ -32,7 +32,7 @@ const CreatePost = () => {
           body: JSON.stringify(form)
         })
         await response.json();
-        navigate('/');
+        navigate('/')
       } catch (error) {
         alert(error)
       }finally{
